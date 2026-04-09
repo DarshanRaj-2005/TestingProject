@@ -15,11 +15,12 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
+          distribution: 'temurin'
           java-version: '17'
 
       - name: Build and analyze
         run: mvn clean verify sonar:sonar \
           -Dsonar.projectKey=darshanraj-2005 \
-          -Dsonar.organization=Darshan Raj J \
+          -Dsonar.organization=darshanraj-2005 \
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
