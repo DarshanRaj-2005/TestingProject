@@ -19,7 +19,7 @@ jobs:
 
       - name: Build and analyze
         run: mvn clean verify sonar:sonar \
-          -Dsonar.projectKey=your_project_key \
-          -Dsonar.organization=your_org \
+          -Dsonar.projectKey=darshanraj-2005 \
+          -Dsonar.organization=Darshan Raj J \
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
